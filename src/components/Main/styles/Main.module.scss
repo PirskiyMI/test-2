@@ -1,0 +1,24 @@
+@import '../../../styles/styles.scss';
+
+.main {
+   position: relative;
+   padding: 90px 0px 69px;
+   overflow: hidden;
+
+   &_container {
+      display: flex;
+      flex-wrap: wrap;
+   }
+   @media (min-width: em(767)) {
+      &_container {
+         justify-content: space-between;
+      }
+   }
+   @media (max-width: em(767)) {
+      padding: 40px 0px 65px;
+      &_container {
+         flex-direction: column;
+         gap: 45px;
+      }
+   }
+}

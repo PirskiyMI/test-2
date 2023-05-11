@@ -1,0 +1,14 @@
+@import '../../../styles/styles.scss';
+
+.footer {
+   &_top {
+      display: flex;
+      justify-content: space-between;
+   }
+   @media (max-width: em(700)) {
+      &_top {
+         flex-direction: column;
+         gap: 30px;
+      }
+   }
+}

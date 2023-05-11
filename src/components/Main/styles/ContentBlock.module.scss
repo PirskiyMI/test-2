@@ -1,0 +1,55 @@
+@import '../../../styles/styles.scss';
+
+.main {
+   &_content {
+      display: flex;
+      flex-direction: column;
+      @include adaptive-value(gap, 61, 40, 1);
+   }
+   &_body {
+      display: flex;
+      flex-direction: column;
+      @include adaptive-value(gap, 40, 20, 1);
+      font-weight: 500;
+   }
+   &_prefs {
+      font-size: 18px;
+      line-height: 122%;
+   }
+   &_items {
+      display: flex;
+      flex-wrap: wrap;
+      @include adaptive-value(column-gap, 30, 10, 1);
+      @include adaptive-value(row-gap, 30, 14, 1);
+   }
+   &_button {
+      max-width: 262px;
+      padding: 21px 34px 21px 35px;
+      background-color: #4077f3;
+   }
+   @media (min-width: em(767)) {
+      &_content {
+         flex: 0 1 330px;
+         text-align: right;
+      }
+      &_items {
+         justify-content: end;
+      }
+      &_button {
+         align-self: end;
+      }
+   }
+   @media (max-width: em(767)) {
+      &_content {
+         align-items: center;
+      }
+      &_items {
+         justify-content: center;
+      }
+   }
+   @media (max-width: em(400)) {
+      &_items {
+         justify-content: start;
+      }
+   }
+}

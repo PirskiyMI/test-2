@@ -1,0 +1,36 @@
+@import '../../../styles/styles.scss';
+@import './FooterTitle.module.scss';
+
+.footer {
+   &_contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      
+   }
+   
+&_socials {
+      display: flex;
+      gap: 13px;
+      font-size: 16px;
+   }
+&_address {
+      @include adaptive-value(font-size, 16, 14, 1);
+   }
+@media (max-width: em(988)) {
+      &_contacts {
+         align-self: end;
+      }
+   }
+   @media (max-width: em(700)) {
+      &_contacts {
+         align-self: start;
+         @include adaptive-value(gap, 15, 10, 1);
+      }
+   }
+   @media (min-width: em(700)) {
+      &_contacts {
+         align-items: flex-start;
+      }
+   }
+}

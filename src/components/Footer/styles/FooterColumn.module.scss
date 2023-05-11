@@ -1,0 +1,14 @@
+@import '../../../styles/styles.scss';
+@import './FooterTitle.module.scss';
+
+.footer {
+   &_element {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+   &_nav {
+      display: flex;
+      @include adaptive-value(gap, 52, 48, 1);
+   }
+}

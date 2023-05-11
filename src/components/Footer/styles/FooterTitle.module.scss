@@ -1,0 +1,10 @@
+.footer {
+   &_title {
+      font-weight: 700;
+      @include adaptive-value(font-size, 14, 12, 1);
+      line-height: 121%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #656566;
+   }
+}

@@ -1,0 +1,13 @@
+@import '../../../styles/styles.scss';
+
+.footer {
+   &_container {
+      display: flex;
+      flex-direction: column;
+      gap: 33px;
+      flex-wrap: wrap;
+   }
+   @media (max-width: em(567)) {
+      padding: 40px 0 60px;
+   }
+}

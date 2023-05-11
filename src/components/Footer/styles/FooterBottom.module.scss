@@ -1,0 +1,13 @@
+.footer {
+   &_bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      font-size: 12px;
+      line-height: 125%;
+      font-family: 'Montserrat';
+   }
+   &_pol {
+      text-decoration-line: underline;
+   }
+}

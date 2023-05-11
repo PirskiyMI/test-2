@@ -1,0 +1,14 @@
+@import '../../../styles/styles.scss';
+
+.footer {
+   &_info {
+      display: flex;
+      gap: 98px;
+      @include adaptive-value(gap, 98, 30, 1);
+   }
+   @media (max-width: em(988)) {
+      &_info {
+         flex-direction: column;
+      }
+   }
+}

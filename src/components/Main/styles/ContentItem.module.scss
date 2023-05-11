@@ -1,0 +1,30 @@
+@import "../../../styles/styles.scss";
+
+.main {
+   &_decor {
+      font-weight: 700;
+   }
+   @media (min-width: em(767)) {
+      &_item {
+         display: flex;
+         flex-direction: column;
+         gap: 6px;
+         flex: 0 1 135px;
+      }
+   }
+}
+.item {
+   @include adaptive-value(font-size, 18, 13, 1);
+   font-weight: 400;
+   &_title {
+      line-height: 122%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+   }
+   @media (min-width: em(767)) {
+      &_title {
+         font-weight: 500;
+      }
+   }
+   
+}

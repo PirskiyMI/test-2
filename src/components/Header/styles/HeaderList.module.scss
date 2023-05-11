@@ -1,0 +1,10 @@
+@import '../../../styles/styles.scss';
+.header {
+   &_list {
+      display: flex;
+      @include adaptive-value(gap, 30, 19, 1);
+   }
+   &_item {
+      font-weight: 500;
+   }
+}

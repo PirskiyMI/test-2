@@ -1,0 +1,28 @@
+@import '../../../styles/styles.scss';
+
+.main {
+   &_title {
+      display: flex;
+      flex-direction: column;
+      @include adaptive-value(gap, 30, 15, 1);
+      @include adaptive-value(flex-basis, 362, 45, 1);
+   }
+   &_top {
+      display: flex;
+      flex-direction: column;
+   }
+   &_label,
+   &_logo {
+      @include adaptive-value(font-size, 48, 36, 1);
+      line-height: 120%;
+   }
+   &_logo {
+      font-weight: 900;
+   }
+   &_subtitle {
+      max-width: 275px;
+      font-size: 18px;
+      font-weight: 122%;
+   }
+}
+

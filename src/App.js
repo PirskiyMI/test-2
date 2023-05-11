@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Circles } from './components/Circles/Circles';
+
+import { Footer } from './components/Footer/SFooter';
+import { Header } from './components/Header/Header';
+import { Main } from './components/Main/Main';
+import { useResize } from './hooks/hooks';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   const { isScreenSm } = useResize();
+   return (
+      <div className="App">
+         <div className="wrapper">
+            <Header />
+            <Main />
+            <Footer />
+         </div>
+         {isScreenSm && <Circles />}
+      </div>
+   );
 }
 
 export default App;

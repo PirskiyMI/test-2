@@ -1,0 +1,9 @@
+@import '../../../styles/styles.scss';
+
+.footer {
+   &_item {
+      font-weight: 400;
+      @include adaptive-value(font-size, 16, 14, 1);
+      line-height: 118%;
+   }
+}

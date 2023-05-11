@@ -1,0 +1,28 @@
+@mixin adaptive-value($property, $startSize, $minSize, $type) {
+   $addsize: $startSize - $minSize;
+   @if $type==1 {
+      #{$property}: $startSize + px;
+      @media (max-width: 1171px) {
+         #{$property}: calc(#{$minSize + px} + #{$addsize} * ((100vw - 320px) / (1171 - 320)));
+      }
+   } @else if $type==2 {
+      #{$property}: $startSize + px;
+      @media (min-width: 1171px) {
+         #{property}: calc(#{$minSize + px} + #{$addsize} * ((100vw - 320px) / (1171 - 320)));
+      }
+   } @else {
+      #{$property}: calc(#{$minSize + px} + #{$addsize} * ((100vw - 320px) / (1171 - 320)));
+   }
+}
+
+// Функция перевода из px в rem
+@function rem($px) {
+   $result: calc($px / 16) + rem;
+   @return $result;
+}
+
+// Функция перевода из px в em
+@function em($px) {
+   $result: calc($px / 16) + em;
+   @return $result;
+}

@@ -1,0 +1,8 @@
+@import '../../../styles/styles.scss';
+
+.header {
+   &_socials {
+      display: flex;
+      @include adaptive-value(gap, 32, 15, 1);
+   }
+}

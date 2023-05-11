@@ -1,0 +1,18 @@
+@import '../../../styles/styles.scss';
+.header {
+   &_right {
+      display: flex;
+   }
+   &_contacts {
+      width: 100%;
+      display: flex;
+      @include adaptive-value(gap, 47, 15, 1);
+   }
+   @media (max-width: em(1050)) {
+      &_contacts {
+         align-items: end;
+         flex-direction: column-reverse;
+         @include adaptive-value(gap, 20, 10, 1);
+      }
+   }
+}

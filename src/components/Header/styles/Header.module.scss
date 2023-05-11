@@ -1,0 +1,24 @@
+@import '../../../styles/styles.scss';
+
+.header {
+   @include adaptive-value(padding-top, 61, 20, 1);
+   @include adaptive-value(padding-bottom, 61, 20, 1);
+   &_container {
+      display: flex;
+      @include adaptive-value(gap, 15, 10, 1);
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+   &_link {
+      &__socials {
+         width: 20px;
+         height: auto;
+      }
+   }
+   @media (max-width: em(1050)) {
+      &_container {
+         align-items: center;
+      }
+   }
+   
+}
